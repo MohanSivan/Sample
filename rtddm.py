@@ -26,7 +26,7 @@ meta_tags=[{"name": "viewport", "content": "width=device-width"}]
 external_stylesheets = [meta_tags, df1]
 
 df = pd.DataFrame(df1)
-df.to_csv(r'F:\RTTDM_Dataexport_dataframe.csv', index=False, header=True)
+#df.to_csv(r'F:\RTTDM_Dataexport_dataframe.csv', index=False, header=True)
 df.to_excel(r'F:\RTTDM_Data\.%d%Y%H%.xlsx', index=False)
 
 
@@ -52,12 +52,12 @@ app.layout = html.Div([
     ], className = 'title_date_time_container'),
     html.Div([
         dcc.Interval(id = 'update_date_time',
-                     interval = 1000,
+                     interval = 5000,
                      n_intervals = 0),
     ]),
     html.Div([
         dcc.Interval(id = 'update_value',
-                     interval = 1000,
+                     interval = 5000,
                      n_intervals = 0),
      ]),
         html.Div([
