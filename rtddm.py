@@ -27,7 +27,7 @@ external_stylesheets = [meta_tags, df1]
 
 df = pd.DataFrame(df1)
 #df.to_csv(r'F:\RTTDM_Dataexport_dataframe.csv', index=False, header=True)
-df.to_excel(r'F:\RTTDM_Data\.%d%Y%H%.xlsx', index=False)
+#df.to_excel(r'F:\RTTDM_Data\.%d%Y%H%.xlsx', index=False)
 
 
 app = dash.Dash(__name__, external_stylesheets = external_stylesheets)
