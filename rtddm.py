@@ -30,7 +30,7 @@ df.to_excel(r'F:\RTTDM_Data\.%d%Y%H%.xlsx', index=False)
 
 
 app = dash.Dash(__name__, external_stylesheets = external_stylesheets)
-
+server = app.server
 app.layout = html.Div([
     html.Div([
         html.Div([
