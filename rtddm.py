@@ -13,7 +13,7 @@ from dash import dcc,html,dash_table
 import plotly.express as px
 import numpy as np
 
-#import dash_daq as daq
+#import dash_daq as daqasset
 # pip install pyorbital
 #from pyorbital.orbital import Orbital
 #satellite = Orbital('TERRA')
