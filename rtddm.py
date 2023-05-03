@@ -20,7 +20,8 @@ import numpy as np
 
 #Read_Excell file_formet with Add Column Names:
 col_names=['Description', 'Machine', 'Readings', 'Datetime']
-df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+#df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
 meta_tags=[{"name": "viewport", "content": "width=device-width"}]
 external_stylesheets = [meta_tags, df1]
 
@@ -125,7 +126,8 @@ def update_data(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         dt_string=str(df1['Datetime'].iloc[-1].strftime("%B %d,%Y %H:%M"))
         df = pd.DataFrame(df1)
         #df.to_csv(r'F:\RTTDM_Dataexport_dataframe.csv', index=False, header=True)
@@ -145,7 +147,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
     return [
             html.Div([
                 html.Div([
@@ -172,7 +175,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_F=["F.Actual Outputs"]
         cleardf5=df1[df1.iloc[:,0].isin(filterkey_F)]
 
@@ -202,7 +206,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_I=["I.Machine Utilization %"]
         cleardf6=df1[df1.iloc[:,0].isin(filterkey_I)]
 
@@ -232,7 +237,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_J=["J.Target Efficiency %"]
         cleardf7=df1[df1.iloc[:,0].isin(filterkey_J)]
 
@@ -262,7 +268,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_B=["B.Run Time in Min"]
         cleardf1=df1[df1.iloc[:,0].isin(filterkey_B)]
         #cleardfB=(cleardf1.iloc[0:1000, [2]].sum())
@@ -296,7 +303,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_C=["C.Idle Time in Min"]
         cleardf2=df1[df1.iloc[:,0].isin(filterkey_C)]
         Total_Machine_Counts = df1.Machine.nunique()
@@ -329,7 +337,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_D=["D.DeadLock Time in Min"]
         cleardf3=df1[df1.iloc[:,0].isin(filterkey_D)]
         Total_Machine_Counts = df1.Machine.nunique()
@@ -362,7 +371,8 @@ def update_graph(n_intervals):
     if n_intervals == 0:
         raise PreventUpdate
     else:
-        df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        #df1 = pd.read_excel(r"\\ebsserver\A&R\RTDDM\RTDataCapture(01).xlsx",names=col_names, header=None)
+        df1 = pd.read_excel(r"RTDataCapture(01).xlsx",names=col_names, header=None)
         filterkey_E=["E.Break Down Time in Min"]
         cleardf4=df1[df1.iloc[:,0].isin(filterkey_E)]
         Total_Machine_Counts = df1.Machine.nunique()
